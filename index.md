@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+# Replication Package for CoLiCo
+<!-- ## Replication Package for Our Paper: Beyond Literal Meaning: Uncover and Explain Implicit Knowledge in Code through Wikipedia-based Concept Linking -->
 
-You can use the [editor on GitHub](https://github.com/codewiki2022/codewiki2022.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+In this replication package, we show the evaluation data and results of CoLiCo (i.e., Concept Linking for Code). To evaluate the quality, accuracy, significance and usefulness of CoLiCo, we conduct a series of experimental studies which answer the following research questions.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- **RQ2 (Accuracy):** How accurate are the concept linkings and explanations uncovered by CoLiCo? Can it outperform existing word sense disambiguation and entity linking approaches for general text?
+- **RQ2 (Significance):** How significantly do the mentions of Wikipedia concepts in reusable source code affect the program comprehension?
+- **RQ3 (Usefulness):** Can the linked concepts and extracted explanations help developers comprehend the implicit knowledge behind code?
 
-### Markdown
+We use the code snippets in the adaptation dataset constructed by Zhang et al. Their purpose was to study the reuse and adaptation of the code snippets on Stack Overflow and the code snippets were identified by linking code snippets on Stack Overflow to their counterparts in GitHub repositories. The dataset includes 629 Java code snippets and each of them is a method with 32.7 lines of code on average. We choose this dataset as these code snippets have been widely reused and adapted and the reuse and adaptation are based on in-depth comprehension of the code.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## RQ1
+To evaluate the accuracy of CoLiCo’s online linking, we randomly select 50 code snippets that are included in different Stack Overflow posts from the adap tation dataset. These code snippets cover different domains such as encryption, network, image, GUI. We use CoLiCo to identify Wikipedia concept linkings and explanations for the 50 code snippets. We choose a word sense disambiguation and entity linking approach called Babelfy as the baseline. The evaluation results are as follows:
 
-```markdown
-Syntax highlighted code block
+Concept Linking by CoLiCo
+Explanantion Excerption by CoLiCo
+Concept Linking by Babelfy
 
-# Header 1
-## Header 2
-### Header 3
+## RQ2
+We use two metrics to evaluate the significance of the concept linkings, i.e., ease and importance. A concept linking is considered significant if it is both difficult (i.e., at least 3 of the 4 annotators somewhat agree or agree) and important (i.e., at least 3 of the 4 annotators somewhat agree or agree).
 
-- Bulleted
-- List
+The evaluation results of significance as follows:
+Significance
 
-1. Numbered
-2. List
+## RQ3
+We use 5 reading and comprehension tasks with 13 questions to evaluate the usefulness of CoLiCo, the tasks and questions are as follows:
 
-**Bold** and _Italic_ and `Code` text
+Reading and Comprehension Tasks
 
-[Link](url) and ![Image](src)
-```
+## Video Demo
+This is a video demo for CoLiCo: 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OJjuUD5aGaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/codewiki2022/codewiki2022.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
