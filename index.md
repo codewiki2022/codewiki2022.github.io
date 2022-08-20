@@ -3,7 +3,7 @@
 
 In this replication package, we show the evaluation data and results of CoLiCo (i.e., Concept Linking for Code). To evaluate the quality, accuracy, significance and usefulness of CoLiCo, we conduct a series of experimental studies which answer the following research questions.
 
-- **RQ2 (Accuracy):** How accurate are the concept linkings and explanations uncovered by CoLiCo? Can it outperform existing word sense disambiguation and entity linking approaches for general text?
+- **RQ1 (Accuracy):** How accurate are the concept linkings and explanations uncovered by CoLiCo? Can it outperform existing word sense disambiguation and entity linking approaches for general text?
 - **RQ2 (Significance):** How significantly do the mentions of Wikipedia concepts in reusable source code affect the program comprehension?
 - **RQ3 (Usefulness):** Can the linked concepts and extracted explanations help developers comprehend the implicit knowledge behind code?
 
